@@ -31,7 +31,7 @@ function App() {
 
   return ( 
 
-  <div onScroll={scrollDown()}>
+  <div id="container" onScroll={scrollDown()}>
     <header id="navbar" className="flex space-between">
       <i className="fas fa-bars flex center" onClick={displayDropBox}></i>
       <h3 className='flex center'>Tzantza</h3>

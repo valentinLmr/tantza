@@ -1,3 +1,7 @@
+.contact {
+  width: 100%;
+}
+
 #banner {
   height: 100vh;
   position: relative;
@@ -248,4 +252,64 @@ a {
 
 .reseau i {
   margin: 0 10px 0 10px;
+}
+
+@media (max-width: 400px) {
+  #banner-title-brand {
+    font-size: 90px;
+    margin: 0;
+  }
+
+  .container-photo {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    position: inherit;
+    height: auto;
+  }
+
+  #photo-left {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 400px;
+    width: 100%;
+  }
+  #photo-center {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 400px;
+    width: 100%;
+  }
+  #photo-right {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 400px;
+    width: 100%;
+  }
+  .photos {
+    object-fit: cover;
+    object-position: center;
+    position: inherit;
+    transform: inherit;
+  }
+
+  #history {
+    background-image: url("/images/history");
+  }
+
+  #history h1 {
+    text-align: center;
+    font-size: 32px;
+    color: white;
+  }
+
+  #history-container {
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+    font-size: 16px;
+  }
 }
