@@ -41,8 +41,8 @@ function App() {
       <div id="dropbox-links">
       <a href="#menu-anchor" >Menu</a >
       <a href="#coktails-anchor">Cocktails</a >
-      <a href="#history-anchor">Histoire</a >
-      <a href="#reserve">Reserver</a >
+      <a href="#history-anchor">History</a >
+      <a href="#contact-anchor">Contact</a >
       </div>
     </div>
     <section id='banner'>
@@ -82,8 +82,8 @@ function App() {
     <section  id='menu'>
       <ScrollableAnchor id={'menu-anchor'}>
       <div href="#menu" id='Food'>
-        <h1> Menu</h1>
-        <h3>Starters</h3>
+        <h1> MENU</h1>
+        <h3>SARTERS</h3>
         <ul className='starters-list'>
           <li className='line'>
             <h4 className='name'>Ceviche de thon, leche de tigre au coc</h4><p className='price'>15€</p>
@@ -103,7 +103,7 @@ function App() {
           
           
         </ul>
-        <h3>Main Courses</h3>
+        <h3>MAIN COURSES</h3>
         <ul className='main-courses-list'>
           <li className='line'>
             <h4 className='name'>Tartare de bœuf, betterave, mayonnaise au wasabi, tajette croustillante</h4><p className='price'>13€</p>
@@ -116,7 +116,7 @@ function App() {
           </li>
           
         </ul>
-          <h3> Desert</h3>
+          <h3> DESSERTS</h3>
         <ul className='desserts-list'>
           <li className='line'>
             <h4 className='name'>Crême brulée</h4><p className='price'>12€</p>
@@ -139,9 +139,9 @@ function App() {
 
         <ScrollableAnchor id={'coktails-anchor'}>
         <div href="#cocktails" id='Bar'>
-            <h3> Drinks</h3>
+            <h3> DRINKS</h3>
           <ul className='drinks-list'>
-            <li className='line'>``
+            <li className='line'>
               <div className='drink'>
                 <h4 className='name'>SERGENT HARTMAN</h4>
                 <p className='recette'> Vodka Combawa, Cordial de gingembre et cidre brut</p>
@@ -192,7 +192,7 @@ Pommeau maison, Citron vert, Blanc d’oeu</p>
     <section href="#history" id='history' className='flex center'>
       <ScrollableAnchor id={'history-anchor'}>
       <div>
-      <h1> Histoire</h1>
+      <h1> HISTORY</h1>
       <div id='history-container' className="flex center">
         <p> sus quaecepedi officiet hil incit, conserem 
 et repudip idendit endel inti con rerciet illabor 
@@ -210,8 +210,26 @@ orianis aut que est  </p>
       </div>
       </ScrollableAnchor>
     </section>
+
+    <ScrollableAnchor id={'contact-anchor'}>
+    <div className="footer" >
+        <h2><strong><u>CONTACT</u></strong></h2>
+        <div className="contact">
+            <p>Contactez nous au <strong>03.20.44.46.07</strong> ou par mail à <strong>Tzantza@gmail.com</strong></p>
+            <div className="reseau">
+                <p>Vous pouvez également nous retrouver sur les sites suivants !</p>
+                <div style={{display:'flex', justifyContent:'center'}}>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </ScrollableAnchor>
 </div>
-  );
+
+  )
 }
+
 
 export default App;
