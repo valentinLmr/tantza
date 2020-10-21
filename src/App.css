@@ -16,3 +16,45 @@
   font-size: 200px;
   margin: 0;
 }
+
+.container-photo {
+  height: 100vh;
+  width: 80%;
+  margin: 10vh auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.photos {
+  position: absolute;
+  transform: translate(-50%, 0%);
+}
+
+#photo-left {
+  height: 70%;
+  width: 30%;
+  top: 20%;
+  left: 20%;
+  z-index: 2;
+}
+#photo-center {
+  height: 80%;
+  width: 30%;
+  top: 5%;
+  left: 50%;
+  z-index: 1;
+}
+#photo-right {
+  height: 75%;
+  width: 30%;
+  top: 20%;
+  left: 81%;
+
+  z-index: 0;
+}
+
+#menu {
+  background-image: url("/images/parchemin.jpg");
+}
