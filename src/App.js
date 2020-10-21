@@ -219,8 +219,8 @@ orianis aut que est  </p>
             <div className="reseau">
                 <p>Vous pouvez également nous retrouver sur les sites suivants !</p>
                 <div style={{display:'flex', justifyContent:'center'}}>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/?hl=fr"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
                 </div>
             </div>
         </div>
