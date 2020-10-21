@@ -73,15 +73,13 @@
 
 #Food {
   background-image: url("/images/parchemin.jpg");
-  background-position: center;
-  background-size: cover;
   text-align: center;
   padding: 5px;
 }
 
 #Bar {
   background-image: url("/images/bar.jpg");
-  background-position: 47% 68%;
+  background-position: 47% 75%;
   background-repeat: no-repeat;
   text-align: center;
   padding: 5px;
@@ -160,6 +158,7 @@ ul {
   top: -80px;
   transition: top 0.5s;
   z-index: 2;
+  cursor: pointer;
 }
 
 #dropbox {
@@ -169,6 +168,7 @@ ul {
   width: 10rem;
   z-index: 3;
   transition: left 0.3s;
+  cursor: pointer;
 }
 
 #dropbox i {
@@ -181,14 +181,18 @@ ul {
 #dropbox-links {
   width: 100%;
   text-align: center;
-  color: white;
-  text-decoration: none;
-  list-style: none;
   position: absolute;
   top: 50%;
   left: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-weight: bold;
 }
 
 .hidden {

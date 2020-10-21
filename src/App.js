@@ -1,5 +1,8 @@
 import React from 'react';
 import './App.css'
+import ScrollableAnchor from 'react-scrollable-anchor'
+
+
 
 function App() {
 
@@ -26,7 +29,9 @@ function App() {
       document.getElementById('navbar').classList.remove("hidden")  
     }
 
-  return ( <div onScroll={scrollDown()}>
+  return ( 
+
+  <div onScroll={scrollDown()}>
     <header id="navbar" className="flex space-between">
       <i className="fas fa-bars flex center" onClick={displayDropBox}></i>
       <h3 className='flex center'>Tzantza</h3>
@@ -34,10 +39,10 @@ function App() {
     <div id="dropbox">
       <i class="fas fa-times" onClick={closeDropBox}></i>
       <div id="dropbox-links">
-      <li>Menu</li>
-      <li>Cocktails</li>
-      <li>Histoire</li>
-      <li>Reserver</li>
+      <a href="#menu-anchor" >Menu</a >
+      <a href="#coktails-anchor">Cocktails</a >
+      <a href="#history-anchor">Histoire</a >
+      <a href="#reserve">Reserver</a >
       </div>
     </div>
     <section id='banner'>
@@ -74,8 +79,9 @@ function App() {
   
     </section>
 
-    <section id='menu'>
-      <div id='Food'>
+    <section  id='menu'>
+      <ScrollableAnchor id={'menu-anchor'}>
+      <div href="#menu" id='Food'>
         <h1> Menu</h1>
         <h3>Starters</h3>
         <ul className='starters-list'>
@@ -129,8 +135,10 @@ function App() {
           </li>
         </ul>
       </div>
+      </ScrollableAnchor>
 
-        <div id='Bar'>
+        <ScrollableAnchor id={'coktails-anchor'}>
+        <div href="#cocktails" id='Bar'>
             <h3> Drinks</h3>
           <ul className='drinks-list'>
             <li className='line'>``
@@ -178,9 +186,11 @@ Pommeau maison, Citron vert, Blanc d’oeu</p>
               <p className='price'>16€</p>
             </li>
           </ul>
-        </div>      
+        </div>   
+        </ScrollableAnchor>   
     </section>
-    <section id='history' className='flex center'>
+    <section href="#history" id='history' className='flex center'>
+      <ScrollableAnchor id={'history-anchor'}>
       <div>
       <h1> Histoire</h1>
       <div id='history-container' className="flex center">
@@ -198,6 +208,7 @@ quatemperum venis dolor ad expelit ecaturi
 orianis aut que est  </p>
       </div>
       </div>
+      </ScrollableAnchor>
     </section>
 </div>
   );
