@@ -2,7 +2,44 @@ import React from 'react';
 import './App.css'
 
 function App() {
-  return ( <div>
+
+  const scrollDown = () => {
+    document.addEventListener('scroll', e => {
+      if(window.scrollY > 450) {
+        document.getElementById('navbar').style.top = "0"
+      } else {
+        document.getElementById('navbar').style.top = "-80px"
+      }
+    })
+  }
+  
+
+  const displayDropBox = () => {
+
+    document.getElementById('dropbox').style.left = "0"    
+    document.getElementById('navbar').classList.add("hidden")  
+  }
+
+    const closeDropBox = () => {
+
+      document.getElementById('dropbox').style.left = '-100rem'    
+      document.getElementById('navbar').classList.remove("hidden")  
+    }
+
+  return ( <div onScroll={scrollDown()}>
+    <header id="navbar" className="flex space-between">
+      <i className="fas fa-bars flex center" onClick={displayDropBox}></i>
+      <h3 className='flex center'>Tzantza</h3>
+    </header>
+    <div id="dropbox">
+      <i class="fas fa-times" onClick={closeDropBox}></i>
+      <div id="dropbox-links">
+      <li>Menu</li>
+      <li>Cocktails</li>
+      <li>Histoire</li>
+      <li>Reserver</li>
+      </div>
+    </div>
     <section id='banner'>
       <div id="content-banner">
       <h1 id='banner-title-brand'>Tantza</h1>
@@ -11,51 +48,156 @@ function App() {
     </section>
 
     <section id='galerie'>
-      <div class='container-photo'>
-        <img class='photos' id='photo-left' src='/images/photo2.png' alt='photo1'></img>
-        <img class='photos' id='photo-center'src='/images/photo3.png' alt='photo1'></img>
-        <img class='photos' id='photo-right' src='/images/photo4.png' alt='photo1'></img>
+      <div className='container-photo'>
+        <img className='photos' id='photo-left' src='/images/photo2.jpg' alt='photo1'></img>
+        <img className='photos' id='photo-center'src='/images/photo3.jpg' alt='photo1'></img>
+        <img className='photos' id='photo-right' src='/images/photo4.jpg' alt='photo1'></img>
       </div>
 
-      <div class='container-photo'>
-      <img class='photos' id='photo-left' src='/images/photo5.png' alt='photo1'></img>
-      <img class='photos' id='photo-center'src='/images/photo6.png' alt='photo1'></img>
-      <img class='photos' id='photo-right' src='/images/photo1.png' alt='photo1'></img>
+      <div className='container-photo'>
+      <img className='photos' id='photo-left' src='/images/photo5.jpg' alt='photo1'></img>
+      <img className='photos' id='photo-center'src='/images/photo6.jpg' alt='photo1'></img>
+      <img className='photos' id='photo-right' src='/images/photo1.jpg' alt='photo1'></img>
       </div>
-      
+
+      <div className='container-photo'>
+      <img className='photos' id='photo-left' src='/images/photo7.jpg' alt='photo1'></img>
+      <img className='photos' id='photo-center'src='/images/photo8.jpg' alt='photo1'></img>
+      <img className='photos' id='photo-right' src='/images/photo9.jpg' alt='photo1'></img>
+      </div>
+
+      <div className='container-photo'>
+      <img className='photos' id='photo-left' src='/images/photo10.jpg' alt='photo1'></img>
+      <img className='photos' id='photo-center'src='/images/photo11.jpg' alt='photo1'></img>
+      <img className='photos' id='photo-right' src='/images/photo12.jpg' alt='photo1'></img>
+      </div>
+  
     </section>
 
     <section id='menu'>
-      <div class='menu-listing'>
-        <h2>Starters</h2>
-        <ul class='starters-list'>
-          <li class='flex line'>
-            <p class='name'></p><p class='price'></p>
+      <div id='Food'>
+        <h1> Menu</h1>
+        <h3>Starters</h3>
+        <ul className='starters-list'>
+          <li className='line'>
+            <h4 className='name'>Ceviche de thon, leche de tigre au coc</h4><p className='price'>15€</p>
+          </li>
+          <li className='line'>
+            <h4 className='name'>Bao à l’encre de seiche, crabe mayonnaise</h4><p className='price'>16€</p>
+          </li>
+          <li className='line'>
+            <h4 className='name'>Artichaut fondant, garniture de saison</h4><p className='price'>14€</p>
+          </li>
+          <li className='line'>
+            <h4 className='name'>Huitres en tempura, béarnaise au yuzu et coriandre</h4><p className='price'>16€</p>
+          </li>
+          <li className='line'>
+            <h4 className='name'>Gyoza de foie gras et sauce ponzu </h4><p className='price'>14€</p>
+          </li>
+          
+          
+        </ul>
+        <h3>Main Courses</h3>
+        <ul className='main-courses-list'>
+          <li className='line'>
+            <h4 className='name'>Tartare de bœuf, betterave, mayonnaise au wasabi, tajette croustillante</h4><p className='price'>13€</p>
+          </li>
+          <li className='line'>
+            <h4 className='name'>Ceviche de mangue</h4><p className='price'>12€</p>
+          </li>
+          <li className='line'>
+            <h4 className='name'>CMaïs rôti frotté au fromage de brebis,  sésame,  quinoa soufflé et coriandr</h4><p className='price'>12€</p>
+          </li>
+          
+        </ul>
+          <h3> Desert</h3>
+        <ul className='desserts-list'>
+          <li className='line'>
+            <h4 className='name'>Crême brulée</h4><p className='price'>12€</p>
+          </li>
+          <li className='line'>
+            <h4 className='name'>Mousse au Chocolat</h4><p className='price'>12€</p>
+          </li>
+          <li className='line'>
+            <h4 className='name'>Glace 2 boules</h4><p className='price'>12€</p>
+          </li>
+          <li className='line'>
+            <h4 className='name'>Café gourmand</h4><p className='price'>12€</p>
+          </li>
+          <li className='line'>
+            <h4 className='name'>Salade de fruits</h4><p className='price'>12€</p>
           </li>
         </ul>
-        <h2>Main Courses</h2>
-        <ul class='main-courses-list'>
-          <li class='flex line'>
-            <p class='name'></p><p class='price'></p>
-          </li>
-        </ul>
-          <h2> Desert</h2>
-        <ul class='desserts-list'>
-          <li class='flex line'>
-            <p class='name'></p><p class='price'></p>
-          </li>
-        </ul>
-          <h2> Drinks</h2>
-        <ul class='drinks-list'>
-          <li class='flex line'>
-            <p class='name'></p><p class='price'></p>
-          </li>
-        </ul>
-    
       </div>
 
-      
-      
+        <div id='Bar'>
+            <h3> Drinks</h3>
+          <ul className='drinks-list'>
+            <li className='line'>``
+              <div className='drink'>
+                <h4 className='name'>SERGENT HARTMAN</h4>
+                <p className='recette'> Vodka Combawa, Cordial de gingembre et cidre brut</p>
+              </div>
+              <p className='price'>14€</p>
+            </li>
+            <li className='line'>
+              <div className='drink'>
+                <h4 className='name'>WEST EGG </h4>
+                <p className='recette'> Monkey 47 Sloe gin aux citrons noirs d’Iran, Verjus, 
+Champagne, gouttes de Ferne</p>
+              </div>
+              <p className='price'>18€</p>
+            </li>
+            <li className='line'>
+              <div className='drink'>
+                <h4 className='name'>SHIBUYA</h4>
+                <p className='recette'>Olorosso, Saké, Cynar cuit sous vide au pandan et à l’anis étoilé </p>
+              </div>
+              <p className='price'>17€</p>
+            </li>
+            <li className='line'>
+              <div className='drink'>
+                <h4 className='name'>MICKEY B MALLORY KNOX </h4>
+                <p className='recette'>Tequila Reposado, Pomme compotées aux 5 épices, 
+Pommeau maison, Citron vert, Blanc d’oeu</p>
+              </div>
+              <p className='price'>16€</p>
+            </li>
+            <li className='line'>
+              <div className='drink'>
+                <h4 className='name'>THE GECKO</h4>
+                <p className='recette'> Campari, Kalamansi, Miel salé, Mezcal, Soda</p>
+              </div>
+              <p className='price'>17€</p>
+            </li>
+            <li className='line'>
+              <div className='drink'>
+                <h4 className='name'>JUSTE UN DOIGT</h4>
+                <p className='recette'> Whisky, Sirop de poivre Blanc maison, Citron vert, Aquafaba</p>
+              </div>
+              <p className='price'>16€</p>
+            </li>
+          </ul>
+        </div>      
+    </section>
+    <section id='history' className='flex center'>
+      <div>
+      <h1> Histoire</h1>
+      <div id='history-container' className="flex center">
+        <p> sus quaecepedi officiet hil incit, conserem 
+et repudip idendit endel inti con rerciet illabor 
+ehentib usapel mo maiorrorror re, que porrovi 
+tatureped min rest, officiam etur? 
+Tas est eos eumendi apicaeprorro dolutem fuga. 
+Tur, id ma velest adipsan duscienis 
+aut quam deni occaere, tenis ea ipsunt, si arcia 
+quos el molu
+Qui cuptasit maio illuptia is reritas 
+consed maxim quodi dellupt atibus 
+quatemperum venis dolor ad expelit ecaturi 
+orianis aut que est  </p>
+      </div>
+      </div>
     </section>
 </div>
   );

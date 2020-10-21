@@ -30,31 +30,167 @@
 .photos {
   position: absolute;
   transform: translate(-50%, 0%);
+  object-fit: cover;
+  object-position: center;
 }
 
 #photo-left {
   height: 70%;
-  width: 30%;
+  width: 35%;
   top: 20%;
-  left: 20%;
+  left: 19%;
   z-index: 2;
 }
 #photo-center {
-  height: 80%;
-  width: 30%;
+  height: 75%;
+  width: 35%;
   top: 5%;
   left: 50%;
   z-index: 1;
 }
 #photo-right {
   height: 75%;
-  width: 30%;
+  width: 35%;
   top: 20%;
-  left: 81%;
+  left: 82%;
 
   z-index: 0;
 }
 
 #menu {
+  margin: 0 auto;
+  color: white;
+}
+
+#menu h1 {
+  font-size: 32px;
+}
+
+#menu h3 {
+  font-size: 24px;
+  margin: 40px 0;
+}
+
+#Food {
   background-image: url("/images/parchemin.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 5px;
+}
+
+#Bar {
+  background-image: url("/images/bar.jpg");
+  background-position: 47% 68%;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 5px;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  border-bottom: 2px solid white;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.line {
+  font-size: 18px;
+}
+
+#starters-list {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#main-courses-list {
+  width: 80%;
+  margin: 0 auto;
+}
+#desserts-list {
+  width: 80%;
+  margin: 0 auto;
+}
+#drinks-list {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+#history {
+  height: 100vh;
+  background-image: url("/images/history");
+}
+
+#history h1 {
+  text-align: center;
+  font-size: 32px;
+  color: white;
+}
+
+#history-container {
+  width: 50%;
+  margin: 0 auto;
+  color: white;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+#navbar {
+  height: 80px;
+  color: white;
+  font-size: 30px;
+  position: fixed;
+  width: 95%;
+  margin: 0 2.5%;
+  z-index: 2;
+  top: -80px;
+  transition: top 0.5s;
+  z-index: 2;
+}
+
+#dropbox {
+  height: 100vh;
+  position: fixed;
+  left: -10rem;
+  width: 10rem;
+  z-index: 3;
+  transition: left 0.3s;
+}
+
+#dropbox i {
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+#dropbox-links {
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  visibility: hidden;
 }
