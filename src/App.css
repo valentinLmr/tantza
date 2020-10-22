@@ -348,4 +348,20 @@ a {
   .body {
     background-size: 195%;
   }
+
+  #logo-header {
+    width: 13%;
+    height: 80%;
+  }
+
+  #menu-header {
+    width: 25%;
+    height: 50%;
+  }
+
+  .banner-title-brand {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+  }
 }
