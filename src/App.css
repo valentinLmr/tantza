@@ -254,7 +254,7 @@ a {
   margin: 0 10px 0 10px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   #banner-title-brand {
     font-size: 90px;
     margin: 0;
