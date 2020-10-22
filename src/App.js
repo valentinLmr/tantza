@@ -33,11 +33,11 @@ function App() {
 
   <div id="container" onScroll={scrollDown()}>
     <header id="navbar" className="flex space-between">
-      <i className="fas fa-bars flex center" onClick={displayDropBox}></i>
-      <h3 className='flex center'>Tzantza</h3>
+      <img onClick={displayDropBox} className='flex center' id='menu-header' src='/images/menu.png' alt='Tzanza-Logo-menu'></img>
+      <img className='flex center' id='logo-header' src='/images/logo.png' alt='Tzanza-Logo-menu'></img>
     </header>
     <div id="dropbox">
-      <i class="fas fa-times" onClick={closeDropBox}></i>
+        <img onClick={closeDropBox} className='flex center' id='cross-dropBox' src='/images/cross.png' alt='Tzanza-Logo-menu'></img>
       <div id="dropbox-links">
       <a href="#menu-anchor" onClick={closeDropBox}>Menu</a >
       <a href="#coktails-anchor" onClick={closeDropBox}>Cocktails</a >
@@ -46,9 +46,11 @@ function App() {
       </div>
     </div>
     <section id='banner'>
+      <div>
+        <img className='banner-title-brand' src='/images/logo.png' alt='Tzanza-Logo-Banner'></img>
       <div id="content-banner">
-      <h1 id='banner-title-brand'>Tzantza</h1>
       <p>58, rue Jean - Jacques Rousseau</p><p> 75001 - Paris</p>
+      </div>
       </div>
     </section>
 
