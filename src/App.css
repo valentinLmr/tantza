@@ -179,6 +179,9 @@ ul {
   z-index: 3;
   transition: left 0.3s;
   cursor: pointer;
+  background-color: #405a4a;
+  opacity: 0.9;
+  transition: 1;
 }
 
 #dropbox i {

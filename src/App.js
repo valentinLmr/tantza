@@ -39,10 +39,10 @@ function App() {
     <div id="dropbox">
       <i class="fas fa-times" onClick={closeDropBox}></i>
       <div id="dropbox-links">
-      <a href="#menu-anchor" >Menu</a >
-      <a href="#coktails-anchor">Cocktails</a >
-      <a href="#history-anchor">History</a >
-      <a href="#contact-anchor">Contact</a >
+      <a href="#menu-anchor" onClick={closeDropBox}>Menu</a >
+      <a href="#coktails-anchor" onClick={closeDropBox}>Cocktails</a >
+      <a href="#history-anchor" onClick={closeDropBox}>History</a >
+      <a href="#contact-anchor" onClick={closeDropBox}>Contact</a >
       </div>
     </div>
     <section id='banner'>
