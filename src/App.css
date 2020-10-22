@@ -316,4 +316,8 @@ a {
   #Bar {
     background-size: cover;
   }
+
+  .body {
+    background-size: 195%;
+  }
 }
