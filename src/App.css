@@ -179,7 +179,7 @@ ul {
   z-index: 3;
   transition: left 0.3s;
   cursor: pointer;
-  background-color: rgb(224 182 133);
+  background-color: rgb(224 182 132);
   opacity: 0.9;
   transition: 1;
 }
